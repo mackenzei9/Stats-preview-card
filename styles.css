@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --bg-bd-clr:hsl(233, 47%, 7%);
+    --crd-bg-clr:hsl(244, 38%, 16%);
+    --acnt-clr:hsl(277, 64%, 61%);
+    --bld-txt-clr:hsl(0, 0%, 100%);
+    --prgrph-clr:hsla(0, 0%, 100%, 0.75);
+    --ff-1:'Inter', sans-serif;
+    --ff-2:'Lexend Deca', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a{
+    color:var(--acnt-clr);
+    font-weight: 700;
+}
+
+body{
+    min-height: 100vh;
+    font-family: var(--ff-1);
+    background-color: var(--bg-bd-clr);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.info{
+    height: 450px;
+    background-color: var(--crd-bg-clr);
+    padding: 4rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.title{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+span{
+    color:var(--acnt-clr)
+}
+
+.description{
+    width: 400px;
+    word-wrap: break-word;
+    margin-top: 2rem;
+    color: var(--prgrph-clr);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-right: 3rem;
+}
+
+.number{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.txt{
+    color: var(--prgrph-clr);
+    font-family: var(--ff-2);
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.desktop {
+    display: inline;
+    height: 450px;
+    border-radius: 0 1rem 1rem 0;
+
+}
+
+.desktop:hover {
+    transition: .4s;
+    box-shadow: 20px 0px 70px 10px rgba(82, 5, 235, 0.3);
+}
+
+.mobile {
+    display: none;
+}
+
+.footer{
+    position: absolute;
+    bottom: 10px;
+}
+
+@media(max-width:1410px){
+    .info{
+        height: 550px;
+    }
+    .desktop{
+        height: 550px;
+    }
+}
+
+@media (max-width:1250px) {
+    .container-card{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 375px;
+        margin: 2.8rem;
+    }
+
+    .info{
+        height: 500px;
+        padding: 2.5rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .title{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .description{
+        width: unset;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+        border-radius:1rem 1rem 0 0;
+        width: 375px;
+    }
+
+    .description{
+        margin-top: 1.8rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        row-gap: .7rem;
+        text-align: center;
+        margin-top: 3rem;
+        padding-right: 0;
+    }
+
+    .number{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media(max-width:470px){
+    .container-card{
+        width: 270px;
+        margin: .7rem;
+    }
+
+    .info{
+        height: 500px;
+        padding: 2.5rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .description{
+        margin-top: 1.2rem;
+        font-size: .8rem;
+        line-height: 1.19rem;
+    }
+
+    .about{
+        margin-top: 2.2rem;
+        padding:0;
+        row-gap: 1.5rem;
+    }
+
+    .number{
+        font-size: 1.3rem;
+    }
+    
+    .txt{
+        font-size: .8rem;
+    }
+
+    .mobile{
+        width: 270px;
+    }
+    .footer{
+        font-size: .8rem;
+    }
+}
